@@ -43,7 +43,7 @@ public class BalanceEnquriy extends JFrame implements ActionListener {
         int balance =0;
         try{
             Connn c = new Connn();
-            ResultSet resultSet = c.statement.executeQuery("Select * from bank where pin = '"+pin+"'");
+            ResultSet resultSet = c.getStatement().executeQuery("Select * from bank where pin = '"+pin+"'");
             while (resultSet.next()){
                 if (resultSet.getString("type").equals("Deposit")){
                     balance += Integer.parseInt(resultSet.getString("amount"));

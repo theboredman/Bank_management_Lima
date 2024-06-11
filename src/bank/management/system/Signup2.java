@@ -204,7 +204,7 @@ package bank.management.system;
 	            }else {
 	                Connn c = new Connn();
 	                String q = "insert into Signuptwo values('"+formno+"', '"+rel+"', '"+cate+"','"+inc+"','"+edu+"','"+occ+"','"+pan+"','"+addhar+"','"+scitizen+"','"+eAccount+"')";
-	                c.statement.executeUpdate(q);
+	                c.getStatement().executeUpdate(q);
 	                new Signup3(formno);
 	                setVisible(false);
 	            }

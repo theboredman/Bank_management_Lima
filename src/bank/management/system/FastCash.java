@@ -92,7 +92,7 @@ public class FastCash extends JFrame implements ActionListener{
             Connn c = new Connn();
             Date date = new Date();
             try{
-                ResultSet resultSet = c.statement.executeQuery("select * from bank where pin = '"+pin+"'");
+                ResultSet resultSet = c.getStatement().executeQuery("select * from bank where pin = '"+pin+"'");
                 int balance =0;
                 while (resultSet.next()){
                     if (resultSet.getString("type").equals("Deposit")){
@@ -107,7 +107,7 @@ public class FastCash extends JFrame implements ActionListener{
                     return;
                 }
 
-                c.statement.executeUpdate("insert into bank values('"+pin+"','"+date+"', 'withdrawl', '"+amount+"')");
+                c.getStatement().executeUpdate("insert into bank values('"+pin+"','"+date+"', 'withdrawl', '"+amount+"')");
                 JOptionPane.showMessageDialog(null, "Rs. "+amount+" Debited Successfully");
             }catch (Exception E){
                 E.printStackTrace();
