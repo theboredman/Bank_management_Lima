@@ -12,7 +12,7 @@ public class Connn {
 	public Connn() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver"); // Register MySQL Driver
-			c = DriverManager.getConnection("jdbc:mysql://localhost:3306/bank_system", "username", "password");
+			c = DriverManager.getConnection("jdbc:mysql://localhost:3306/bank_system", "root", "310305");
 			statement = c.createStatement(); // Create statement
 		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
