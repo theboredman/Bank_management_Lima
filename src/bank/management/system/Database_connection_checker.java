@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class Main {
+public class Database_connection_checker {
     public static void main(String[] args) {
         // Database URL, username, and password
         String url = "jdbc:mysql://localhost:3306/bankmanagementsystem";
